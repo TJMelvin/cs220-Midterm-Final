@@ -1,9 +1,16 @@
-﻿namespace TylerMelvin_DiscussionBoard.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TylerMelvin_DiscussionBoard.Models
 {
-    public class EntityBase
+    public abstract class EntityBase
     {
-        public int id { get; set; }
-        public Boolean IsDeleted { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+        public bool IsDeleted { get; set; }
+
+        [ConcurrencyCheck]
         public long Timestamp { get; set; }
     }
 }

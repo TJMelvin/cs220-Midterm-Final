@@ -1,10 +1,42 @@
 ﻿@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
+@model TylerMelvin_DiscussionBoard.Pages.IndexModel
+@using TylerMelvin_DiscussionBoard.Models
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="container mb-3">
+        <form method="get">
+            <button type="submit" asp-page="/DiscussionThreads">New Discussion Thread</button>
+        </form>
+    </div>
+
+    <div>
+        @if (Model.DiscussionThreads.Count != 0)
+        {
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>User</th>
+                        <th>Date</th>
+                        <th>Posts</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (DiscussionThread dt in Model.DiscussionThreads)
+                    {
+                        <tr>
+                            <td><a asp-page="/DiscussionThreads" asp-route-id="@dt.Id">@dt.Title</a></td>
+                            <td>@dt.ApplicationUser?.ToString()</td>
+                            <td>@dt.CreatedAt.ToLocalTime().ToString("f")</td>
+                            <td><a asp-page="/Discussion" asp-route-ThreadId="@dt.Id">@dt.Posts.Count</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <h3>No threads have been created yet.</h3>
+        }
+    </div>
 </div>

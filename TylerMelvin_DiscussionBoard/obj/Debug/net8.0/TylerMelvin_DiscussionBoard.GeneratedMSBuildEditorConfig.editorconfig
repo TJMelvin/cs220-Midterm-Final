@@ -9,49 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TylerMelvin_DiscussionBoard
 build_property.RootNamespace = TylerMelvin_DiscussionBoard
-build_property.ProjectDir = C:\Users\tmelvin\source\repos\Midterm-Final\TylerMelvin_DiscussionBoard\
+build_property.ProjectDir = C:\Users\tiffa\source\repos\Miderm-Final\TylerMelvin_DiscussionBoard\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\tmelvin\source\repos\Midterm-Final\TylerMelvin_DiscussionBoard
+build_property.MSBuildProjectDirectory = C:\Users\tiffa\source\repos\Miderm-Final\TylerMelvin_DiscussionBoard
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/tmelvin/source/repos/Midterm-Final/TylerMelvin_DiscussionBoard/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/tiffa/source/repos/Miderm-Final/TylerMelvin_DiscussionBoard/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tmelvin/source/repos/Midterm-Final/TylerMelvin_DiscussionBoard/Pages/Error.cshtml]
+[C:/Users/tiffa/source/repos/Miderm-Final/TylerMelvin_DiscussionBoard/Pages/Discussion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlzY3Vzc2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tiffa/source/repos/Miderm-Final/TylerMelvin_DiscussionBoard/Pages/DiscussionThreads.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlzY3Vzc2lvblRocmVhZHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tiffa/source/repos/Miderm-Final/TylerMelvin_DiscussionBoard/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tmelvin/source/repos/Midterm-Final/TylerMelvin_DiscussionBoard/Pages/Index.cshtml]
+[C:/Users/tiffa/source/repos/Miderm-Final/TylerMelvin_DiscussionBoard/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tmelvin/source/repos/Midterm-Final/TylerMelvin_DiscussionBoard/Pages/Privacy.cshtml]
+[C:/Users/tiffa/source/repos/Miderm-Final/TylerMelvin_DiscussionBoard/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tmelvin/source/repos/Midterm-Final/TylerMelvin_DiscussionBoard/Pages/Shared/_LoginPartial.cshtml]
+[C:/Users/tiffa/source/repos/Miderm-Final/TylerMelvin_DiscussionBoard/Pages/Reply.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVwbHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tiffa/source/repos/Miderm-Final/TylerMelvin_DiscussionBoard/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tmelvin/source/repos/Midterm-Final/TylerMelvin_DiscussionBoard/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/tiffa/source/repos/Miderm-Final/TylerMelvin_DiscussionBoard/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tmelvin/source/repos/Midterm-Final/TylerMelvin_DiscussionBoard/Pages/_ViewImports.cshtml]
+[C:/Users/tiffa/source/repos/Miderm-Final/TylerMelvin_DiscussionBoard/Pages/_PostTreeView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1Bvc3RUcmVlVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tiffa/source/repos/Miderm-Final/TylerMelvin_DiscussionBoard/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tmelvin/source/repos/Midterm-Final/TylerMelvin_DiscussionBoard/Pages/_ViewStart.cshtml]
+[C:/Users/tiffa/source/repos/Miderm-Final/TylerMelvin_DiscussionBoard/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/tmelvin/source/repos/Midterm-Final/TylerMelvin_DiscussionBoard/Pages/Shared/_Layout.cshtml]
+[C:/Users/tiffa/source/repos/Miderm-Final/TylerMelvin_DiscussionBoard/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ns5i6540gi

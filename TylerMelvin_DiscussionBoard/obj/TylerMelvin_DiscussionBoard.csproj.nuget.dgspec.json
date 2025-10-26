@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tmelvin\\source\\repos\\Midterm-Final\\TylerMelvin_DiscussionBoard\\TylerMelvin_DiscussionBoard.csproj": {}
+    "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\TylerMelvin_DiscussionBoard.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tmelvin\\source\\repos\\Midterm-Final\\TylerMelvin_DiscussionBoard\\TylerMelvin_DiscussionBoard.csproj": {
+    "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\TylerMelvin_DiscussionBoard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tmelvin\\source\\repos\\Midterm-Final\\TylerMelvin_DiscussionBoard\\TylerMelvin_DiscussionBoard.csproj",
+        "projectUniqueName": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\TylerMelvin_DiscussionBoard.csproj",
         "projectName": "TylerMelvin_DiscussionBoard",
-        "projectPath": "C:\\Users\\tmelvin\\source\\repos\\Midterm-Final\\TylerMelvin_DiscussionBoard\\TylerMelvin_DiscussionBoard.csproj",
-        "packagesPath": "C:\\Users\\tmelvin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tmelvin\\source\\repos\\Midterm-Final\\TylerMelvin_DiscussionBoard\\obj\\",
+        "projectPath": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\TylerMelvin_DiscussionBoard.csproj",
+        "packagesPath": "C:\\Users\\tiffa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\tmelvin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tiffa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -64,7 +64,7 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.10, )"
+              "version": "[8.0.19, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
