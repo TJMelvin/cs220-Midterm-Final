@@ -1,0 +1,26 @@
+﻿@model TylerMelvin_DiscussionBoard.Models.Post
+@using TylerMelvin_DiscussionBoard.Models
+
+<div class="card rounded-0 rounded-2 mb-3">
+    <div class="card-header">
+        <strong class="card-title">@Html.Raw(Model.Title)</strong>
+        <div class="text-muted">by @Model.ApplicationUser?.ToString() on @Model.CreatedAt.ToString("f")</div>
+    </div>
+    <div class="card-body rounded-0 rounded-2">
+        <p class="card-text">@Html.Raw(Model.Content)</p>
+        <a asp-page="/Reply" asp-route-ThreadId="@Model.DiscussionThreadId" asp-route-PostId="@Model.Id" class="text-decoration-none">
+            <button class="btn btn-outline-primary">Reply</button>
+        </a>
+    </div>
+
+    @* Recursively render children *@
+    @if (Model.SubPosts != null && Model.SubPosts.Count > 0)
+    {
+        <div class="ms-3">
+            @foreach (var child in Model.SubPosts)
+            {
+                <partial name="_PostTreeView" model="child" />
+            }
+        </div>
+    }
+</div>

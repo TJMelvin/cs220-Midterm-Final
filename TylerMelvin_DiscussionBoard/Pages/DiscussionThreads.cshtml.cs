@@ -18,6 +18,8 @@ namespace TylerMelvin_DiscussionBoard.Pages
         private readonly ILogger<DiscussionThreadsModel> _log;
         [BindProperty]
         public DiscussionThread DiscussionThread { get; set; }
+        
+        [BindProperty]
         public ViewItem Discussion { get; set; }
 
         public DiscussionThreadsModel(DiscussionThreadService service, ILogger<DiscussionThreadsModel> log)
@@ -89,7 +91,7 @@ namespace TylerMelvin_DiscussionBoard.Pages
                     savedThread = _service.Add(DiscussionThread);
                     _log.LogInformation($"Added new DiscussionThread with ID {savedThread.Id}");
                 }
-                return RedirectToPage("/Discussion", new { id = savedThread.Id });
+                return RedirectToPage("/DiscussionThreads", new { id = savedThread.Id });
             }
             catch (Exception ex)
             {

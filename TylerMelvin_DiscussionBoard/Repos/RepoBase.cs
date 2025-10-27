@@ -13,27 +13,37 @@ namespace TylerMelvin_DiscussionBoard.Repos
 
         public RepoBase(ApplicationDbContext context)
         {
-            _context = context;
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public IQueryable<T> All() => _context.Set<T>();
-        public IQueryable<T> Search(Expression<Func<T, bool>> predicate) => _context.Set<T>().Where(predicate);
-        
+        public DbSet<T> All() => _context.Set<T>();
+
+        public IQueryable<T> Search(Expression<Func<T, bool>> predicate)
+             => _context.Set<T>().Where(predicate);
+
         public void Add(T entity)
         {
+            if (entity == null) throw new ArgumentNullException(nameof(entity));
             _context.Set<T>().Add(entity);
         }
 
         public void Update(T entity)
         {
+            if (entity == null) throw new ArgumentNullException(nameof(entity));
             _context.Set<T>().Update(entity);
         }
 
-        public void Remove(T entity)
+        public void Remove (T entity)
         {
+            if (entity == null) throw new ArgumentNullException(nameof(entity));
             _context.Set<T>().Remove(entity);
         }
 
-        public void SaveChanges() => _context.SaveChanges();
+        public int SaveChanges() => _context.SaveChanges();
+
+        void IRepo<T>.SaveChanges()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

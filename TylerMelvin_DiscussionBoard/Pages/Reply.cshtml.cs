@@ -13,11 +13,11 @@ namespace TylerMelvin_DiscussionBoard.Pages
     [Authorize]
     public class ReplyModel : PageModel
     {
-        private readonly DiscussionThreadService _discussionService;
+        private readonly DiscussionThreadService _threadService;
         private readonly PostService _postService;
         private readonly ILogger<ReplyModel> _log;
-
-        public DiscussionThread DiscussionThread { get; set; }
+        
+        [BindProperty(SupportsGet = true)]
         public int ThreadId { get; set; }
 
         [BindProperty(SupportsGet = true)]
@@ -27,18 +27,14 @@ namespace TylerMelvin_DiscussionBoard.Pages
         public ViewItem Parent { get; set; }
 
         [BindProperty]
-        private Post Post { get; set; }
+        public Post Post { get; set; }
 
-        public ReplyModel(
-            DiscussionThreadService discussionService,
-            PostService postService,
-            ILogger<ReplyModel> log)
+        public ReplyModel(DiscussionThreadService threadService, PostService postService, ILogger<ReplyModel> log)
         {
-            _discussionService = discussionService;
+            _threadService = threadService;
             _postService = postService;
             _log = log;
 
-            DiscussionThread = new DiscussionThread();
             Parent = new ViewItem();
             Post = new Post();
         }
@@ -49,26 +45,19 @@ namespace TylerMelvin_DiscussionBoard.Pages
             {
                 if (ThreadId > 0)
                 {
-                    // Load discussion thread
-                    DiscussionThread = _discussionService.Get(ThreadId);
-                    Parent.Id = DiscussionThread.Id;
-                    Parent.Title = DiscussionThread.Title;
-                    Parent.Content = DiscussionThread.Content;
-
-                    // If replying to a specific post
-                    if (PostId.HasValue && PostId.Value > 0)
-                    {
-                        var parentPost = _postService.Get(PostId.Value);
-                        if (parentPost != null)
-                        {
-                            Parent.Id = parentPost.Id;
-                            Parent.Title = parentPost.Title;
-                            Parent.Content = parentPost.Content;
-                        }
-                    }
-
-                    _log.LogInformation($"Loaded DiscussionThread with ID {ThreadId} successfully.");
+                    var thread = _threadService.Get(ThreadId);
+                    Parent.Id = thread.Id;
+                    Parent.Title = thread.Title;
+                    Parent.Content = thread.Content;
                 }
+                if (PostId.HasValue && PostId.Value > 0)
+                {
+                    var parentPost = _postService.Get(PostId.Value);
+                    Parent.Id = parentPost.Id;
+                    Parent.Title = parentPost.Title;
+                    Parent.Content = parentPost.Content;
+                }
+                _log.LogInformation($"Loaded DiscussionThread with ID {ThreadId} successfully.");
             }
             catch (Exception ex)
             {
@@ -76,31 +65,45 @@ namespace TylerMelvin_DiscussionBoard.Pages
             }
         }
 
+        [Authorize]
         public IActionResult OnPost()
         {
             try
             {
-                if (PostId.HasValue && PostId.Value > 0)
+                if (!ModelState.IsValid)
                 {
-                    Post.ParentPostId = PostId.Value;
+                    _log.LogError("Model state invalid in Reply OnPost");
+                    return Page();
                 }
-                Post.DiscussionThreadId = ThreadId;
-                Post.Title = Parent.Title;
-                Post.Content = Parent.Content;
-                Post.ApplicationUserId = User.FindFirstValue(ClaimTypes.NameIdentifier) ?? string.Empty;
-                Post.DiscussionThread = null;
-                Post.ApplicationUser = null;
-                Post.ParentPost = null;
 
-                _postService.Add(Post);
-                _log.LogInformation("Added reply with Id {PostId}", Post.Id);
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (string.IsNullOrEmpty(userId))
+                {
+                    _log.LogWarning("User ID missing when posting reply");
+                    return RedirectToPage("/Account/Login");
+                }
+
+                // Map view model to Post entity
+                var newPost = new Post
+                {
+                    Title = Post.Title,
+                    Content = Post.Content,
+                    DiscussionThreadId = ThreadId,
+                    ParentPostId = PostId.HasValue && PostId.Value > 0 ? (int?)PostId.Value : null,
+                    ApplicationUser = null,
+                    ApplicationUserId = userId
+                };
+
+                var saved = _postService.Add(newPost);
+                _log.LogInformation("Added reply with Id {PostId}", saved.Id);
+
+                return RedirectToPage("/Discussion", new { ThreadId = ThreadId });
             }
             catch (Exception ex)
             {
-                _log.LogError($"Error adding reply for ThreadId {ThreadId}: {ex.Message}");
+                _log.LogError(ex, "Error in Reply OnPost for ThreadId {ThreadId}", ThreadId);
+                return Page();
             }
-
-            return LocalRedirect("/Discussion/" + ThreadId);
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using TylerMelvin_DiscussionBoard.Models;
 
 namespace TylerMelvin_DiscussionBoard.Models
 {
@@ -16,6 +15,7 @@ namespace TylerMelvin_DiscussionBoard.Models
         {
             Posts = new List<Post>();
             CreatedAt = DateTime.Now;
+            PostCount = 0;
         }
     }
 }

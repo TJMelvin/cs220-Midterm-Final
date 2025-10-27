@@ -5,7 +5,7 @@
 }
 
 <div class="container">
-    <form id="form" method="post" onsubmit="hadleSubmit()">
+    <form id="form" method="post" onsubmit="handleSubmit()">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
         @if (Model.Discussion.Id > 0)
@@ -15,7 +15,7 @@
             </div>
         }
 
-        <input type="hidden" asp-for="Discussion.Id" value="@Model.Discussion.Id" />
+        <input type="hidden" asp-for="Discussion.Content" id="Discussion_Content" />
 
         <div class="form-group">
             <label asp-for="Discussion.Title" class="control-label"></label>
