@@ -58,6 +58,7 @@ namespace TylerMelvin_DiscussionBoard.Services
                     .Where(x => !x.IsDeleted) 
                     .OrderByDescending(x => x.CreatedAt)
                     .ToList();
+                _log.LogInformation($"Fetched {threads.Count} threads");
 
                 foreach (var t in threads)
                 {

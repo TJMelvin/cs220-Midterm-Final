@@ -11,9 +11,11 @@
         @if (Model.Discussion.Id > 0)
         {
             <div class="row">
-                <p>Created On @Model.DiscussionThread.CreatedAt.ToString("f")</p>
+                <p>Created On @Model.Discussion.CreatedAt.ToString("f")</p>
             </div>
         }
+
+        <input type="hidden" asp-for="Discussion.ApplicationUserId" />
 
         <input type="hidden" asp-for="Discussion.Content" id="Discussion_Content" />
 

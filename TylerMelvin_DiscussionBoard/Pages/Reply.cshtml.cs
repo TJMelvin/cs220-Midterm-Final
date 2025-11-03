@@ -70,12 +70,6 @@ namespace TylerMelvin_DiscussionBoard.Pages
         {
             try
             {
-                if (!ModelState.IsValid)
-                {
-                    _log.LogError("Model state invalid in Reply OnPost");
-                    return Page();
-                }
-
                 var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 if (string.IsNullOrEmpty(userId))
                 {
