@@ -11,6 +11,7 @@ namespace TylerMelvin_DiscussionBoard.ViewModels
         [StringLength(512)]
         public string Title { get; set; }
 
+        [Required]
         public string Content { get; set; }
         public DateTime CreatedAt { get; set; }
         public string ApplicationUserId { get; set; }

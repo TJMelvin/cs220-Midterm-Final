@@ -1,10 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
-using System;
 using System.Security.Claims;
-using System.Threading;
 using TylerMelvin_DiscussionBoard.Models;
 using TylerMelvin_DiscussionBoard.Services;
 using TylerMelvin_DiscussionBoard.ViewModels;
@@ -17,9 +14,9 @@ namespace TylerMelvin_DiscussionBoard.Pages
     {
         private readonly DiscussionThreadService _service;
         private readonly ILogger<DiscussionThreadsModel> _log;
-        [BindProperty]
+
         public DiscussionThread DiscussionThread { get; set; }
-        
+
         [BindProperty]
         public ViewItem Discussion { get; set; }
 
@@ -28,7 +25,6 @@ namespace TylerMelvin_DiscussionBoard.Pages
             _service = service;
             _log = log;
 
-            DiscussionThread = new DiscussionThread();
             Discussion = new ViewItem();
         }
 
@@ -44,7 +40,7 @@ namespace TylerMelvin_DiscussionBoard.Pages
                         Id = DiscussionThread.Id,
                         Title = DiscussionThread.Title,
                         Content = DiscussionThread.Content,
-                        CreatedAt=DiscussionThread.CreatedAt
+                        CreatedAt = DiscussionThread.CreatedAt
                     };
                     _log.LogInformation($"Fetched {DiscussionThread.Id} threads");
                 }
@@ -59,13 +55,9 @@ namespace TylerMelvin_DiscussionBoard.Pages
         {
             try
             {
-                if(!ModelState.IsValid)
-                {
-                   _log.LogError("ModelState is invalid.");
-                    return Page();
-                }
 
                 DiscussionThread savedThread;
+
                 if (Discussion.Id != 0)
                 {
                     var existingThread = _service.Get(Discussion.Id);
@@ -102,11 +94,12 @@ namespace TylerMelvin_DiscussionBoard.Pages
                     savedThread = _service.Add(newThread);
                     _log.LogInformation($"Added new DiscussionThread with ID {savedThread.Id}");
                 }
+
                 return RedirectToPage("/DiscussionThreads", new { id = savedThread.Id });
             }
             catch (Exception ex)
             {
-                _log.LogError($"Error in onpost: {ex.Message}");
+                _log.LogError($"Error in OnPost: {ex.Message}");
                 return Page();
             }
         }
