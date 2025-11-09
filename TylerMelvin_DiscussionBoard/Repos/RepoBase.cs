@@ -39,11 +39,6 @@ namespace TylerMelvin_DiscussionBoard.Repos
             _context.Set<T>().Remove(entity);
         }
 
-        public int SaveChanges() => _context.SaveChanges();
-
-        void IRepo<T>.SaveChanges()
-        {
-            throw new NotImplementedException();
-        }
+        public void SaveChanges() => _context.SaveChanges();
     }
 }
