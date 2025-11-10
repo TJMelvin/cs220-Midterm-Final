@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Security.Claims;
+using TylerMelvin_DiscussionBoard.Helpers;
 using TylerMelvin_DiscussionBoard.Models;
 using TylerMelvin_DiscussionBoard.Services;
 using TylerMelvin_DiscussionBoard.ViewModels;
@@ -14,41 +15,58 @@ namespace TylerMelvin_DiscussionBoard.Pages
     {
         private readonly DiscussionThreadService _service;
         private readonly ILogger<DiscussionThreadsModel> _log;
+        private readonly IAuthorizationService _authorizationService;
 
         public DiscussionThread DiscussionThread { get; set; }
 
         [BindProperty]
         public ViewItem Discussion { get; set; }
 
-        public DiscussionThreadsModel(DiscussionThreadService service, ILogger<DiscussionThreadsModel> log)
+        public DiscussionThreadsModel(DiscussionThreadService service, ILogger<DiscussionThreadsModel> log, IAuthorizationService authorizationService)
         {
             _service = service;
             _log = log;
 
             Discussion = new ViewItem();
+            _authorizationService = authorizationService;
         }
 
-        public void OnGet(int? id)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
             try
             {
-                if (id.HasValue)
+                if (id != null)
                 {
                     DiscussionThread = _service.Get(id.Value);
-                    Discussion = new ViewItem
+
+                    AuthorizationResult isAuthorized =
+                        await _authorizationService.AuthorizeAsync(
+                            User,
+                            DiscussionThread,
+                            PolicyTypes.IsOwnerOrAdmin
+                        );
+
+                    if (isAuthorized.Succeeded)
                     {
-                        Id = DiscussionThread.Id,
-                        Title = DiscussionThread.Title,
-                        Content = DiscussionThread.Content,
-                        CreatedAt = DiscussionThread.CreatedAt
-                    };
-                    _log.LogInformation($"Fetched {DiscussionThread.Id} threads");
+                        Discussion.Id = DiscussionThread.Id;
+                        Discussion.Title = DiscussionThread.Title;
+                        Discussion.Content = DiscussionThread.Content;
+                        Discussion.CreatedAt = DiscussionThread.CreatedAt;
+
+                        _log.LogInformation($"Authorized to edit DiscussionThread ID {DiscussionThread.Id}");
+                    }
+                    else
+                    {
+                        return LocalRedirect("/Identity/Account/AccessDenied");
+                    }
                 }
             }
             catch (Exception ex)
             {
                 _log.LogWarning($"Failed to load DiscussionThread: {ex.Message}");
             }
+
+            return Page();
         }
 
         public IActionResult OnPost()

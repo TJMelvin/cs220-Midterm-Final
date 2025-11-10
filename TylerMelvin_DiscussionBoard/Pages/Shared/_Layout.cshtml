@@ -31,8 +31,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
-                        @if ((await AuthorizationService.AuthorizeAsync(HttpContextAccessor.HttpContext.User,
-                                                PolicyTypes.IsAdmin)).Succeeded)
+                        @if (HttpContextAccessor.HttpContext.User.HasClaim(PolicyTypes.IsOwnerOrAdmin, PolicyValues.True))
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-page="/UserAdmin">User Admin</a>

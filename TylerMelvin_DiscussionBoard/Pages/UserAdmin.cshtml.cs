@@ -12,7 +12,7 @@ using TylerMelvin_DiscussionBoard.Services;
 
 namespace TylerMelvin_DiscussionBoard.Pages
 {
-    [Authorize(Policy = PolicyTypes.IsAdmin)]
+    //[Authorize(Policy = PolicyTypes.IsOwnerOrAdmin)]
     public class UserAdminModel : PageModel
     {
         private readonly ApplicationUserService _service;

@@ -46,37 +46,14 @@ namespace TylerMelvin_DiscussionBoard.Services
 
         public async Task<bool> IsAdminAsync(string userId)
         {
-            if (ApplicationUser == null || !ApplicationUser.Id.Equals(userId))
-            {
-                ApplicationUser = await GetUserAsync(userId);
-            }
-
-            foreach (Claim claim in await GetApplicationClaimsAsync(userId))
-            {
-                if (claim.Type.Equals(PolicyTypes.IsAdmin))
-                {
-                    return bool.Parse(claim.Value);
-                }
-            }
-            return false;
+            var claims = await GetApplicationClaimsAsync(userId);
+            return claims.Any(c => c.Type == PolicyTypes.IsAdmin && c.Value == PolicyValues.True);
         }
 
         public async Task<bool> IsModeratorAsync(string userId)
         {
-            if (ApplicationUser == null || !ApplicationUser.Id.Equals(userId))
-            {
-                ApplicationUser = await GetUserAsync(userId);
-            }
-
-            foreach (Claim claim in await GetApplicationClaimsAsync(userId))
-            {
-                if (claim.Type.Equals(PolicyTypes.IsModerator))
-                {
-                    return bool.Parse(claim.Value);
-                }
-            }
-
-            return false;
+            var claims = await GetApplicationClaimsAsync(userId);
+            return claims.Any(c => c.Type == PolicyTypes.IsModerator && c.Value == PolicyValues.True);
         }
 
         public async Task<List<Claim>> GetApplicationClaimsAsync(string userId)

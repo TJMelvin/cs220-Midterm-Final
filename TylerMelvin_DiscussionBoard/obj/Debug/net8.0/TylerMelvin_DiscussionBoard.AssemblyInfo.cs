@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TylerMelvin_DiscussionBoard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfc8d213ca2147dc31365a06bee66d3247f5e15e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65646a34013e4a07565449205f23ce6260e79771")]
 [assembly: System.Reflection.AssemblyProductAttribute("TylerMelvin_DiscussionBoard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TylerMelvin_DiscussionBoard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
