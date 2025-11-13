@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using TylerMelvin_DiscussionBoard.Authorization;
 using TylerMelvin_DiscussionBoard.Data;
 using TylerMelvin_DiscussionBoard.Helpers;
 using TylerMelvin_DiscussionBoard.Models;
@@ -19,14 +21,11 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 //Add Authorization
 builder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy(PolicyTypes.IsAdmin, policy =>
-        policy.RequireClaim(PolicyTypes.IsAdmin, PolicyValues.True));
-
-    options.AddPolicy(PolicyTypes.IsModerator, policy =>
-        policy.RequireAssertion(context =>
-            context.User.HasClaim(c => c.Type.Equals(PolicyTypes.IsModerator) && c.Value.Equals(PolicyValues.True)) ||
-            context.User.HasClaim(c => c.Type.Equals(PolicyTypes.IsAdmin) && c.Value.Equals(PolicyValues.True))
-        ));
+    options.AddPolicy(PolicyTypes.IsOwnerOrAdmin, policy =>
+    {
+        policy.RequireAuthenticatedUser();
+        policy.AddRequirements(new IsOwnerOrAdminRequirement());
+    });
 });
 
 builder.Services.AddHttpContextAccessor();
@@ -42,6 +41,7 @@ builder.Services.AddScoped<PostService>();
 builder.Services.AddScoped<DiscussionThreadService>();
 builder.Services.AddScoped<ApplicationUserService>();
 
+builder.Services.AddScoped<IAuthorizationHandler, IsOwnerOrAdminHandler>();
 
 builder.Services.AddRazorPages();
 

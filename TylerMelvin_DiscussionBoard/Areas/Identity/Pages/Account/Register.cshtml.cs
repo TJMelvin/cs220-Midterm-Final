@@ -138,9 +138,9 @@ namespace TylerMelvin_DiscussionBoard.Areas.Identity.Pages.Account
 
                     var userId = await _userManager.GetUserIdAsync(user);
                     ApplicationUser newUser = await _userManager.FindByIdAsync(userId);
-                    Claim adminClaim = new Claim(PolicyTypes.IsAdmin, PolicyValues.False);
-                    Claim moderatorClaim = new Claim(PolicyTypes.IsModerator, PolicyValues.False);
-                    await _userManager.AddClaimsAsync(newUser, [adminClaim, moderatorClaim]);
+                    Claim adminClaim = new Claim(PolicyTypes.IsOwnerOrAdmin, PolicyValues.False);
+                    Claim ownerClaim = new Claim(PolicyTypes.IsOwnerOrAdmin, PolicyValues.False);
+                    await _userManager.AddClaimsAsync(newUser, [adminClaim, ownerClaim]);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(

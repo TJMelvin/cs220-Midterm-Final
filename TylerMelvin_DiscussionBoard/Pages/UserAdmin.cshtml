@@ -30,7 +30,7 @@
         <br />
         <br />
 
-@if (Model.ApplicationUser != null && Model.Claims.Count > 0)
+@if (Model.ApplicationUser != null)
 {
             <div class="card d-inline-flex">
                 <div class="card-header">
@@ -45,7 +45,7 @@
                                 {
                                     <form asp-route-Id="@Model.Id" method="post">
                                         <input type="hidden" name="Type" value="@PolicyTypes.IsAdmin" />
-                                        <input type="hidden" name="Value" value="@PolicyValues.False" />
+                                        <input type="hidden" name="Value" value="@PolicyValues.True" />
                                         <partial name="_RemoveButton" />
                                     </form>
                                 }

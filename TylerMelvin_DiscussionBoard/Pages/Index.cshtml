@@ -1,6 +1,10 @@
 ﻿@page
 @model TylerMelvin_DiscussionBoard.Pages.IndexModel
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
 @using TylerMelvin_DiscussionBoard.Models
+@using TylerMelvin_DiscussionBoard.Helpers
 
 <div class="text-center">
     <div class="container mb-3">
@@ -25,8 +29,20 @@
                     @foreach (DiscussionThread dt in Model.DiscussionThreads)
                     {
                         <tr>
-                            <td><a asp-page="/DiscussionThreads" asp-route-id="@dt.Id">@dt.Title</a></td>
-                            <td>@dt.ApplicationUser?.ToString()</td>
+                            <td>
+                                @if ((await AuthorizationService.AuthorizeAsync(
+                                                        HttpContextAccessor.HttpContext.User,
+                                                        dt,
+                                                        PolicyTypes.IsOwnerOrAdmin)).Succeeded)
+                                {
+                                    <a href="/DiscussionThreads/@dt.Id">@dt.Title</a>
+                                }
+                                else
+                                {
+                                    @dt.Title
+                                }
+                            </td>
+                            <td>@dt.ApplicationUser.FirstName.ToString() @dt.ApplicationUser.LastName.ToString()</td>
                             <td>@dt.CreatedAt.ToLocalTime().ToString("f")</td>
                             <td><a asp-page="/Discussion" asp-route-ThreadId="@dt.Id">@dt.Posts.Count</a></td>
                         </tr>
