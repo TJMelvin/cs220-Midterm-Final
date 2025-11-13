@@ -3,33 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|c:\\users\\tiffa\\source\\repos\\miderm-final\\tylermelvin_discussionboard\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|c:\\users\\tiffa\\source\\repos\\miderm-final\\tylermelvin_discussionboard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|c:\\users\\tiffa\\source\\repos\\miderm-final\\tylermelvin_discussionboard\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-<<<<<<< HEAD
-=======
-      "AbsoluteMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|c:\\users\\tiffa\\source\\repos\\miderm-final\\tylermelvin_discussionboard\\pages\\useradmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|solutionrelative:pages\\useradmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|c:\\users\\tiffa\\source\\repos\\miderm-final\\tylermelvin_discussionboard\\pages\\useradmin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|solutionrelative:pages\\useradmin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|c:\\users\\tiffa\\source\\repos\\miderm-final\\tylermelvin_discussionboard\\helpers\\policytypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|solutionrelative:helpers\\policytypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|c:\\users\\tiffa\\source\\repos\\miderm-final\\tylermelvin_discussionboard\\authorization\\isowneroradminhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|solutionrelative:authorization\\isowneroradminhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|c:\\users\\tiffa\\source\\repos\\miderm-final\\tylermelvin_discussionboard\\authorization\\isowneroradminrequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|solutionrelative:authorization\\isowneroradminrequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
->>>>>>> df68456a2bf4991b647ada376390c79aec383552
       "AbsoluteMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|c:\\users\\tiffa\\source\\repos\\miderm-final\\tylermelvin_discussionboard\\pages\\discussionthreads.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|solutionrelative:pages\\discussionthreads.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -40,21 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|c:\\users\\tiffa\\source\\repos\\miderm-final\\tylermelvin_discussionboard\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|c:\\users\\tiffa\\source\\repos\\miderm-final\\tylermelvin_discussionboard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-<<<<<<< HEAD
-=======
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|c:\\users\\tiffa\\source\\repos\\miderm-final\\tylermelvin_discussionboard\\services\\applicationuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|solutionrelative:services\\applicationuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|c:\\users\\tiffa\\source\\repos\\miderm-final\\tylermelvin_discussionboard\\helpers\\policyvalues.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DCE41D6-459F-4797-93D9-036955A1E9FD}|TylerMelvin_DiscussionBoard.csproj|solutionrelative:helpers\\policyvalues.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> df68456a2bf4991b647ada376390c79aec383552
     }
   ],
   "DocumentGroupContainers": [
@@ -85,103 +55,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-13T16:52:50.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T03:59:25.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Pages\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Pages\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
-<<<<<<< HEAD
-              "ViewState": "AgIAAAIAAAAAAAAAAAAswBsAAAAAAAAAAAAAAA==",
-=======
-              "ViewState": "AgIAAAgAAAAAAAAAAAAswCEAAAAZAAAAAAAAAA==",
->>>>>>> df68456a2bf4991b647ada376390c79aec383552
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-10T04:15:03.738Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-<<<<<<< HEAD
-=======
-              "Title": "UserAdmin.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Pages\\UserAdmin.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\UserAdmin.cshtml.cs",
-              "ToolTip": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Pages\\UserAdmin.cshtml.cs",
-              "RelativeToolTip": "Pages\\UserAdmin.cshtml.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T03:59:57.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PolicyTypes.cs",
-              "DocumentMoniker": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Helpers\\PolicyTypes.cs",
-              "RelativeDocumentMoniker": "Helpers\\PolicyTypes.cs",
-              "ToolTip": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Helpers\\PolicyTypes.cs",
-              "RelativeToolTip": "Helpers\\PolicyTypes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T04:04:09.285Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
->>>>>>> df68456a2bf4991b647ada376390c79aec383552
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Pages\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Pages\\Index.cshtml.cs",
-              "RelativeToolTip": "Pages\\Index.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T04:21:20.951Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-<<<<<<< HEAD
-=======
-              "Title": "UserAdmin.cshtml",
-              "DocumentMoniker": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Pages\\UserAdmin.cshtml",
-              "RelativeDocumentMoniker": "Pages\\UserAdmin.cshtml",
-              "ToolTip": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Pages\\UserAdmin.cshtml",
-              "RelativeToolTip": "Pages\\UserAdmin.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAkwCAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-10T04:08:58.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IsOwnerOrAdminRequirement.cs",
-              "DocumentMoniker": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Authorization\\IsOwnerOrAdminRequirement.cs",
-              "RelativeDocumentMoniker": "Authorization\\IsOwnerOrAdminRequirement.cs",
-              "ToolTip": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Authorization\\IsOwnerOrAdminRequirement.cs",
-              "RelativeToolTip": "Authorization\\IsOwnerOrAdminRequirement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T04:01:25.778Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IsOwnerOrAdminHandler.cs",
-              "DocumentMoniker": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Authorization\\IsOwnerOrAdminHandler.cs",
-              "RelativeDocumentMoniker": "Authorization\\IsOwnerOrAdminHandler.cs",
-              "ToolTip": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Authorization\\IsOwnerOrAdminHandler.cs",
-              "RelativeToolTip": "Authorization\\IsOwnerOrAdminHandler.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T04:05:14.62Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
->>>>>>> df68456a2bf4991b647ada376390c79aec383552
               "Title": "DiscussionThreads.cshtml",
               "DocumentMoniker": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Pages\\DiscussionThreads.cshtml",
               "RelativeDocumentMoniker": "Pages\\DiscussionThreads.cshtml",
@@ -189,31 +101,25 @@
               "RelativeToolTip": "Pages\\DiscussionThreads.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-10T04:21:24.797Z"
+              "WhenOpened": "2025-11-10T04:21:24.797Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
               "DocumentIndex": 4,
-=======
-              "DocumentIndex": 9,
->>>>>>> df68456a2bf4991b647ada376390c79aec383552
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAuwC4AAAAAAAAAAAAAAA==",
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "Pages\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T03:59:25.846Z"
+              "WhenOpened": "2025-11-10T04:21:20.951Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 3,
-=======
-              "DocumentIndex": 8,
->>>>>>> df68456a2bf4991b647ada376390c79aec383552
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml",
@@ -221,34 +127,8 @@
               "RelativeToolTip": "Pages\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-10T04:00:27.521Z"
-<<<<<<< HEAD
-=======
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ApplicationUserService.cs",
-              "DocumentMoniker": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Services\\ApplicationUserService.cs",
-              "RelativeDocumentMoniker": "Services\\ApplicationUserService.cs",
-              "ToolTip": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Services\\ApplicationUserService.cs",
-              "RelativeToolTip": "Services\\ApplicationUserService.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAmwEwAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T04:04:26.931Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "PolicyValues.cs",
-              "DocumentMoniker": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Helpers\\PolicyValues.cs",
-              "RelativeDocumentMoniker": "Helpers\\PolicyValues.cs",
-              "ToolTip": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Helpers\\PolicyValues.cs",
-              "RelativeToolTip": "Helpers\\PolicyValues.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T04:04:16.123Z"
->>>>>>> df68456a2bf4991b647ada376390c79aec383552
+              "WhenOpened": "2025-11-10T04:00:27.521Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -7,8 +7,25 @@ using TylerMelvin_DiscussionBoard.Helpers;
 using TylerMelvin_DiscussionBoard.Models;
 using TylerMelvin_DiscussionBoard.Repos;
 using TylerMelvin_DiscussionBoard.Services;
+using Serilog;
+using Serilog.Events;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Environment.ApplicationName = "TylerMelvin_DiscussionBoard";
+
+string logPath = builder.Environment.ContentRootPath + "/DiscussionBoard";
+
+builder.Host.UseSerilog((context, services, configuration) => configuration
+    .ReadFrom.Configuration(context.Configuration)
+    .ReadFrom.Services(services)
+    .Enrich.FromLogContext()
+    .WriteTo.SQLite(
+        sqliteDbPath: logPath + @"-logs.db",
+        restrictedToMinimumLevel: LogEventLevel.Information,
+        storeTimestampInUtc: true
+     )
+);
 
 // Add services to the container.
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
