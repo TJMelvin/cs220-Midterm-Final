@@ -58,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -77,22 +77,6 @@
               "Name": "ST:1:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:253279231:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:2031669256:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1076781245:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1997951853:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
@@ -100,18 +84,10 @@
               "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\tiffa\\source\\repos\\Miderm-Final\\TylerMelvin_DiscussionBoard\\Pages\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAUwCEAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-10T04:15:03.738Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1638928462:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:2088629290:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
             },
             {
               "$type": "Document",
@@ -136,8 +112,7 @@
               "RelativeToolTip": "Helpers\\PolicyTypes.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T04:04:09.285Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T04:04:09.285Z"
             },
             {
               "$type": "Document",
@@ -149,8 +124,7 @@
               "RelativeToolTip": "Pages\\Index.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T04:21:20.951Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T04:21:20.951Z"
             },
             {
               "$type": "Document",
@@ -175,8 +149,7 @@
               "RelativeToolTip": "Authorization\\IsOwnerOrAdminRequirement.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T04:01:25.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T04:01:25.778Z"
             },
             {
               "$type": "Document",
@@ -188,8 +161,7 @@
               "RelativeToolTip": "Authorization\\IsOwnerOrAdminHandler.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T04:05:14.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T04:05:14.62Z"
             },
             {
               "$type": "Document",
@@ -201,8 +173,7 @@
               "RelativeToolTip": "Pages\\DiscussionThreads.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-10T04:21:24.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T04:21:24.797Z"
             },
             {
               "$type": "Document",
@@ -214,8 +185,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAuwC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T03:59:25.846Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T03:59:25.846Z"
             },
             {
               "$type": "Document",
@@ -227,8 +197,7 @@
               "RelativeToolTip": "Pages\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-10T04:00:27.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T04:00:27.521Z"
             },
             {
               "$type": "Document",
@@ -240,8 +209,7 @@
               "RelativeToolTip": "Services\\ApplicationUserService.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAmwEwAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T04:04:26.931Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T04:04:26.931Z"
             },
             {
               "$type": "Document",
@@ -253,8 +221,7 @@
               "RelativeToolTip": "Helpers\\PolicyValues.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T04:04:16.123Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-10T04:04:16.123Z"
             }
           ]
         }
