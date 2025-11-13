@@ -1,0 +1,99 @@
+﻿@page "{Id?}"
+@model TylerMelvin_DiscussionBoard.Pages.UserAdminModel
+@using System.Security.Claims
+@using TylerMelvin_DiscussionBoard.Helpers
+@using TylerMelvin_DiscussionBoard.Models
+
+@{
+    ViewData["Title"] = "Manage User Permissions";
+}
+
+<div class="text-center">
+    <div class="container">
+        <h2>@ViewData["Title"]</h2>
+
+        <form method="get">
+            <div class="form-group mb-3">
+                <label asp-for="ApplicationUser">Select User</label>
+                <select asp-for="Id" class="form-control">
+                    <option value="">-- Select User --</option>
+                    @foreach (ApplicationUser user in Model.Users)
+                    {
+                        <option value="@user.Id" selected="@(Model.Id == user.Id ? "selected" : null)">
+                            @user.UserName
+                        </option>
+                    }
+                </select>
+            </div>
+        </form>
+
+        <br />
+        <br />
+
+@if (Model.ApplicationUser != null)
+{
+            <div class="card d-inline-flex">
+                <div class="card-header">
+                    <h5 class="card-title">Permissions for @Model.ApplicationUser.UserName</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <tr>
+                            <td>Administrator</td>
+                            <td>
+                                @if (Model.IsAdmin)
+                                {
+                                    <form asp-route-Id="@Model.Id" method="post">
+                                        <input type="hidden" name="Type" value="@PolicyTypes.IsAdmin" />
+                                        <input type="hidden" name="Value" value="@PolicyValues.True" />
+                                        <partial name="_RemoveButton" />
+                                    </form>
+                                }
+                                else
+                                {
+                                    <form asp-route-Id="@Model.Id" method="post">
+                                        <input type="hidden" name="Type" value="@PolicyTypes.IsAdmin" />
+                                        <input type="hidden" name="Value" value="@PolicyValues.True" />
+                                        <partial name="_AddButton" />
+                                    </form>
+                                }
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Moderator</td>
+                            <td>
+                                @if (Model.IsModerator)
+                                {
+                                    <form asp-route-Id="@Model.Id" method="post">
+                                        <input type="hidden" name="Type" value="@PolicyTypes.IsModerator" />
+                                        <input type="hidden" name="Value" value="@PolicyValues.False" />
+                                        <partial name="_RemoveButton" />
+                                    </form>
+                                }
+                                else
+                                {
+                                    <form asp-route-Id="@Model.Id" method="post">
+                                        <input type="hidden" name="Type" value="@PolicyTypes.IsModerator" />
+                                        <input type="hidden" name="Value" value="@PolicyValues.True" />
+                                        <partial name="_AddButton" />
+                                    </form>
+                                }
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+}
+       
+
+@section Scripts {
+    <script>
+        const idSelect = document.getElementById('Id');
+        if (idSelect) {
+            idSelect.addEventListener('change', function () {
+                this.form.submit();
+            });
+        }
+    </script>
+}

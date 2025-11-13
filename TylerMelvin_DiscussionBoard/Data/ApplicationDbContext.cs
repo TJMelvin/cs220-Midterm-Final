@@ -29,7 +29,7 @@ namespace TylerMelvin_DiscussionBoard.Data
                 var conn = _config.GetConnectionString("DefaultConnection");
                 if (!string.IsNullOrEmpty(conn))
                 {
-                    optionsBuilder.UseSqlServer(conn);
+                    optionsBuilder.UseSqlite(conn);
                 }
             }
         }

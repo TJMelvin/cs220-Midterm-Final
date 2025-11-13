@@ -6,8 +6,9 @@ namespace TylerMelvin_DiscussionBoard.Models
 {
     public abstract class DiscussionBase : EntityBase
     {
-        [MaxLength(512)]
+        [Required, MaxLength(512)]
         public string Title { get; set; }
+        [Required]
         public string Content { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
