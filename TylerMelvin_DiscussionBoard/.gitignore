@@ -1,22 +1,11 @@
 # Visual Studio
 .vs/
 
-# Build output
+# Build artifacts
 bin/
 obj/
 
-# Cache & temp files
-*.cache
-*.db
-*.v2
+# User-specific files
 *.suo
-
-# Compiled files
-*.dll
-*.pdb
-
-# Static web asset caches
-staticwebassets*.json
-
-# Backup files
-*.json.backup
+*.user
+*.cache
