@@ -1,0 +1,22 @@
+# Visual Studio
+.vs/
+
+# Build output
+bin/
+obj/
+
+# Cache & temp files
+*.cache
+*.db
+*.v2
+*.suo
+
+# Compiled files
+*.dll
+*.pdb
+
+# Static web asset caches
+staticwebassets*.json
+
+# Backup files
+*.json.backup
