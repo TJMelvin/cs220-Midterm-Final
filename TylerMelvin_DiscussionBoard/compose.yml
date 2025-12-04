@@ -1,0 +1,27 @@
+services:
+  nginx:
+    build: ./Nginx
+    container_name: nginx
+    ports:
+      - "80:80"
+    networks:
+      - discussionboard
+
+  discussionboard:
+    build: .
+    container_name: discussionboard
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      - nginx
+    ports:
+      - "80"
+    networks:
+      - discussionboard
+    volumes:
+      - ./Database:/app/Data
+  
+
+networks:
+  discussionboard:
+    driver: bridge
