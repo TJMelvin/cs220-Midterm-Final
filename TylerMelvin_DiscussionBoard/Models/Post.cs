@@ -22,6 +22,7 @@ namespace TylerMelvin_DiscussionBoard.Models
 
         [ForeignKey(nameof(ApplicationUser))]
         public string ApplicationUserId { get; set; }
+        public bool IsDeleted { get; set; } = false;
         public ApplicationUser ApplicationUser { get; set; }
 
         public DateTime CreatedAt { get; set; }

@@ -186,5 +186,13 @@ namespace TylerMelvin_DiscussionBoard.Services
                 return 0;
             }
         }
+
+        public List<Post> GetDeletedPosts()
+        {
+            return _postRepo.Search(p => p.IsDeleted)
+                        .Include(p => p.ApplicationUser)
+                        .Include(p => p.DiscussionThread)
+                        .ToList();
+        }
     }
 }

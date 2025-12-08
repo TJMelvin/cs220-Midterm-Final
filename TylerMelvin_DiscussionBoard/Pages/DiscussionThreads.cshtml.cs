@@ -113,7 +113,7 @@ namespace TylerMelvin_DiscussionBoard.Pages
                     _log.LogInformation($"Added new DiscussionThread with ID {savedThread.Id}");
                 }
 
-                return RedirectToPage("/DiscussionThreads", new { id = savedThread.Id });
+                return RedirectToPage("Index");
             }
             catch (Exception ex)
             {

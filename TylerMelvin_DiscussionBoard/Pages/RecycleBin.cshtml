@@ -1,0 +1,86 @@
+﻿@page
+@model TylerMelvin_DiscussionBoard.Pages.RecycleBinModel
+@{
+    ViewData["Title"] = "Recycle Bin";
+}
+
+<h2>Recycle Bin</h2>
+<hr />
+
+<h3>Deleted Discussion Threads</h3>
+
+@if (Model.DeletedThreads.Count == 0)
+{
+    <p><em>No deleted threads.</em></p>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var thread in Model.DeletedThreads)
+            {
+                <tr>
+                    <td>@thread.Title</td>
+                    <td>@thread.ApplicationUser?.UserName</td>
+                    <td>@thread.CreatedAt.ToString("f")</td>
+                    <td>
+                        <form method="post" asp-page-handler="RestoreThread" asp-route-id="@thread.Id" class="d-inline">
+                            <button class="btn btn-success btn-sm">Restore</button>
+                        </form>
+                        <form method="post" asp-page-handler="DeleteThread" asp-route-id="@thread.Id" class="d-inline">
+                            <button class="btn btn-danger btn-sm">Delete Permanently</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<hr />
+
+<h3>Deleted Posts</h3>
+
+@if (Model.DeletedPosts.Count == 0)
+{
+    <p><em>No deleted posts.</em></p>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Content</th>
+                <th>Author</th>
+                <th>Thread</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var post in Model.DeletedPosts)
+            {
+                <tr>
+                    <td>@Html.Raw(post.Content)</td>
+                    <td>@post.ApplicationUser?.UserName</td>
+                    <td>@post.DiscussionThread?.Title</td>
+                    <td>
+                        <form method="post" asp-page-handler="RestorePost" asp-route-id="@post.Id" class="d-inline">
+                            <button class="btn btn-success btn-sm">Restore</button>
+                        </form>
+                        <form method="post" asp-page-handler="DeletePost" asp-route-id="@post.Id" class="d-inline">
+                            <button class="btn btn-danger btn-sm">Delete Permanently</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

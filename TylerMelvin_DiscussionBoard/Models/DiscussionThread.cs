@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Identity.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -10,6 +11,9 @@ namespace TylerMelvin_DiscussionBoard.Models
 
         [NotMapped]
         public int PostCount { get; set; }
+
+        [NotMapped]
+        public DateTime LastUpdated { get; set; }
 
         public DiscussionThread() 
         {

@@ -20,3 +20,50 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+:root {
+    --wvup-blue: #224A99;
+    --wvup-gold: #ECCC00;
+}
+
+.navbar{
+    background-color: var(--wvup-blue) !important;
+}
+
+.navbar-item{
+    color: #000;
+}
+
+.navbar-user-greeting{
+    color: var(--wvup-blue);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-user-greeting:hover{
+    color: var(--wvup-gold) !important;
+}
+
+.nav-link:hover {
+    color: var(--wvup-gold) !important;
+}
+
+.navbar-user-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 100px solid var(--wvu-gold);
+    margin-right: 8px;
+}
+
+.table-link {
+    color: var(--wvup-blue) !important;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.table-link:hover {
+     color: var(--wvup-gold) !important;
+}

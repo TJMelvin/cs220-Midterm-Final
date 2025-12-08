@@ -3,25 +3,63 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
+@{
+    ApplicationUser user = null;
+    string avatarBase64 = null;
+
+    if (SignInManager.IsSignedIn(User))
+    {
+        user = await UserManager.GetUserAsync(User);
+
+        if (user?.AvatarImage != null)
+        {
+            avatarBase64 = "data:image/png;base64," + Convert.ToBase64String(user.AvatarImage);
+        }
+    }
+}
+
 <ul class="navbar-nav">
-@if (SignInManager.IsSignedIn(User))
-{
-    <li class="nav-item">
-        <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
-    </li>
-    <li class="nav-item">
-        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })">
-            <button  type="submit" class="nav-link btn btn-link text-dark">Logout</button>
-        </form>
-    </li>
-}
-else
-{
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
-    </li>
-}
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <li class="nav-item d-flex align-items-center" style="gap:10px;">
+
+            @* Avatar image if uploaded *@
+            @if (avatarBase64 != null)
+            {
+                <img src="@avatarBase64" class="navbar-user-avatar"/>
+            }
+            else
+            {
+                @* Fallback circle with initials *@
+                <div class="navbar-user-avatar" style= display:flex; align-items:center; justify-content:center; font-size:14px;">
+                    @user.Email.Substring(0, 1).ToUpper()
+                </div>
+            }
+
+            <a class="nav-link navbar-user-greeting"
+               asp-area="Identity"
+               asp-page="/Account/Manage/Index"
+               title="Manage">
+                Hello @User.Identity?.Name!
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <form class="form-inline"
+                  asp-area="Identity"
+                  asp-page="/Account/Logout"
+                  asp-route-returnUrl="@Url.Page("/Index", new { area = "" })">
+                <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+            </form>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        </li>
+    }
 </ul>

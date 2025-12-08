@@ -12,6 +12,10 @@ namespace TylerMelvin_DiscussionBoard.Models
         [MaxLength(100)]
         public string? LastName { get; set; }
 
+        public byte[]? AvatarImage { get; set; }
+
+        public string? Bio {  get; set; }
+
         public List<DiscussionThread> Threads { get; set; }
         public List<Post> Posts { get; set; }
 

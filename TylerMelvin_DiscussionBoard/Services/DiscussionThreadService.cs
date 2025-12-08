@@ -233,5 +233,12 @@ namespace TylerMelvin_DiscussionBoard.Services
                 return 0;
             }
         }
+
+        public List<DiscussionThread> GetDeletedThreads()
+        {
+            return _repo.Search(t => t.IsDeleted)
+                .Include(t => t.ApplicationUser)
+                .ToList();
+        }
     } 
 }

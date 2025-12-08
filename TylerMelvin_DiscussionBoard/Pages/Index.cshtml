@@ -21,8 +21,9 @@
                     <tr>
                         <th>Title</th>
                         <th>User</th>
-                        <th>Date</th>
-                        <th>Posts</th>
+                        <th>Date Posted</th>
+                        <th>Last Updated</th>
+                        <th>Replies</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,21 +31,20 @@
                     {
                         <tr>
                             <td>
-                                @if ((await AuthorizationService.AuthorizeAsync(
-                                                        HttpContextAccessor.HttpContext.User,
-                                                        dt,
-                                                        PolicyTypes.IsOwnerOrAdmin)).Succeeded)
-                                {
-                                    <a href="/DiscussionThreads/@dt.Id">@dt.Title</a>
-                                }
-                                else
-                                {
+                                <a class="table-link" asp-page="/Discussion" asp-route-ThreadId="@dt.Id">
                                     @dt.Title
-                                }
+                                </a>
                             </td>
-                            <td>@dt.ApplicationUser.FirstName.ToString() @dt.ApplicationUser.LastName.ToString()</td>
+                        <td>
+                            <a class="table-link" asp-page="/ProfileIndex" asp-route-id="@dt.ApplicationUser.Id">
+                                    @(dt.ApplicationUser != null
+                                                                ? $"{dt.ApplicationUser.FirstName} {dt.ApplicationUser.LastName}"
+                                                                : "Unknown")
+                            </a>
+                        </td>
                             <td>@dt.CreatedAt.ToLocalTime().ToString("f")</td>
-                            <td><a asp-page="/Discussion" asp-route-ThreadId="@dt.Id">@dt.Posts.Count</a></td>
+                            <td>@dt.LastUpdated.ToLocalTime().ToString("f")</td>
+                            <td><a>@dt.Posts.Count</a></td>
                         </tr>
                     }
                 </tbody>

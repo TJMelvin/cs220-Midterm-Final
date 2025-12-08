@@ -27,6 +27,17 @@ namespace TylerMelvin_DiscussionBoard.Pages
             {
                 DiscussionThreads = _discussionService.GetAll();
                 _log.LogInformation($"Loaded {DiscussionThreads.Count} discussion threads.");
+                foreach (var thread in DiscussionThreads)
+                {
+                    if (thread.Posts != null && thread.Posts.Count > 0)
+                    {
+                        thread.LastUpdated = thread.Posts.Max(p => p.CreatedAt);
+                    }
+                    else
+                    { 
+                        thread.LastUpdated = thread.CreatedAt;
+                    }
+                }
             }
             catch (Exception ex)
             {

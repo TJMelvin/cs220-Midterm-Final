@@ -26,6 +26,12 @@ builder.Services.AddAuthorization(options =>
         policy.RequireAuthenticatedUser();
         policy.AddRequirements(new IsOwnerOrAdminRequirement());
     });
+
+    options.AddPolicy(PolicyTypes.IsAdmin, policy =>
+        policy.RequireClaim(PolicyTypes.IsAdmin, PolicyValues.True));
+
+    options.AddPolicy(PolicyTypes.IsModerator, policy =>
+        policy.RequireClaim(PolicyTypes.IsModerator, PolicyValues.True));
 });
 
 builder.Services.AddHttpContextAccessor();

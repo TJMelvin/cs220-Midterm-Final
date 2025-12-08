@@ -1,0 +1,65 @@
+﻿@page "{id:int}"
+@model TylerMelvin_DiscussionBoard.Pages.EditThreadModel
+@using TylerMelvin_DiscussionBoard.Models
+
+@{
+    ViewData["Title"] = "Edit Thread";
+}
+
+<div class="container">
+    <h3>Edit Thread</h3>
+
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <input type="hidden" asp-for="Thread.Id" />
+
+        <div class="form-group mb-3">
+            <label asp-for="Thread.Title"></label>
+            <input asp-for="Thread.Title" class="form-control" />
+            <span asp-validation-for="Thread.Title" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Thread.Content"></label>
+            <textarea asp-for="Thread.Content" rows="6" class="form-control"></textarea>
+            <span asp-validation-for="Thread.Content" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+
+        <a class="btn btn-secondary"
+           href="/Discussion/@Model.Thread.Id">
+            Cancel
+        </a>
+    </form>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
+
+    <script>
+        var toolbarOptions = [
+            ['bold', 'italic', 'underline', 'strike'],
+            ['blockquote', 'code-block'],
+            [{ 'header': 1 }, { 'header': 2 }],
+            [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+            ['link', 'image'],
+            ['clean']
+        ];
+
+        const quill = new Quill('#editor', {
+            modules: { toolbar: toolbarOptions },
+            theme: 'snow'
+        });
+
+        quill.root.innerHTML = '@Html.Raw(Model.Thread.Content ?? "")';
+
+        function handleSubmit() {
+            document.getElementById("Post_Content").value = quill.root.innerHTML;
+        }
+    </script>
+}

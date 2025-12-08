@@ -1,19 +1,48 @@
 ﻿@model TylerMelvin_DiscussionBoard.Models.Post
+@using Microsoft.AspNetCore.Authorization
 @using TylerMelvin_DiscussionBoard.Models
+@using TylerMelvin_DiscussionBoard.Helpers
+@inject IAuthorizationService AuthorizationService
 
 <div class="card rounded-0 rounded-2 mb-3">
     <div class="card-header">
         <strong class="card-title">@Html.Raw(Model.Title)</strong>
         <div class="text-muted">by @Model.ApplicationUser?.ToString() on @Model.CreatedAt.ToString("f")</div>
     </div>
+
     <div class="card-body rounded-0 rounded-2">
         <p class="card-text">@Html.Raw(Model.Content)</p>
-        <a asp-page="/Reply" asp-route-ThreadId="@Model.DiscussionThreadId" asp-route-PostId="@Model.Id" class="text-decoration-none">
-            <button class="btn btn-outline-primary">Reply</button>
+
+        @* REPLY BUTTON *@
+        <a asp-page="/Reply"
+           asp-route-ThreadId="@Model.DiscussionThreadId"
+           asp-route-PostId="@Model.Id"
+           class="text-decoration-none">
+            <button class="btn btn-outline-primary">
+                Reply
+            </button>
         </a>
+
+        @*DELETE BUTTON *@
+        @if (User.Identity.IsAuthenticated &&
+                (User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value == Model.ApplicationUser.Id || User.IsInRole("Administrator")))
+        {
+            <form method="post"
+                  asp-page-handler="DeletePost"
+                  asp-route-postId="@Model.Id"
+                  class="d-inline float-end ms-1">
+                <button type="submit" class="btn btn-danger btn-sm">
+                    Delete
+                </button>
+            </form>
+            <a asp-page="/EditPost" asp-route-id="@Model.Id"
+               class="btn btn-warning btn-sm float-end ms-2">
+                Edit
+            </a>
+        }
     </div>
 
-    @* Recursively render children *@
+    @* CHILD POSTS *@
     @if (Model.SubPosts != null && Model.SubPosts.Count > 0)
     {
         <div class="ms-3">
